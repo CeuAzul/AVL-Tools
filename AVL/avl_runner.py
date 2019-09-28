@@ -26,9 +26,9 @@ def change_dimensions(data):
 
     dir_name = os.path.dirname(os.path.abspath(__file__))
     airfoils_path = os.path.join(dir_name, 'airfoils')
-    
+
     config_file = os.path.join(dir_name, 'configs.avl')
-    
+
     airfoil1_file = os.path.join(airfoils_path, airfoil1_name + '.dat')
     airfoil2_file = os.path.join(airfoils_path, airfoil2_name + '.dat')
     airfoil3_file = os.path.join(airfoils_path, airfoil3_name + '.dat')
@@ -42,8 +42,8 @@ def get_aero_coef(Cl_max_airfoil):
     dir_name = os.path.dirname(os.path.abspath(__file__))
     config_file = os.path.join(dir_name, 'configs.avl')
     outputs_path = os.path.join(dir_name, 'outputs')
-    output_file = os.path.join(outputs_path, 'coeficients.txt')
-    output2_file = os.path.join(outputs_path, 'coeficients_along_span.txt')
+    output_file = os.path.join(outputs_path, 'coeficients')
+    output2_file = os.path.join(outputs_path, 'coeficients_along_span')
     avl_file = os.path.join(dir_name, 'avl.exe')
 
     alpha_range = np.arange(-20, 21, 1)
@@ -54,7 +54,7 @@ def get_aero_coef(Cl_max_airfoil):
 
     open(output_file, 'a').close()
     open(output2_file, 'a').close()
-    
+
 
     for alpha in alpha_range:
         os.remove(output_file)
