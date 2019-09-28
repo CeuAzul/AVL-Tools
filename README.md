@@ -1,5 +1,7 @@
 # AVL Tools
 
+AVL Tools is a wrapper around AVL (by Mark Drela - MIT) that allows one to easily modify an AVL configuration file through Python.
+
 ## Using
 
 Run "test.py" to analyze the desired aerodynamic surface.
@@ -30,3 +32,8 @@ As VLM doesn't have a stall criteria, you can use the cl_max_airfoil variable to
 ## Errors
 
 If you get FileNotFoundError on "coeficients_along_span" file, you are probably inside a folder location that is too deep for Windows to interpret. In this case, move the entire AVL folder to something closer than the drive root (ex.: "C:/").
+
+## Authors
+
+- André Silva Wagner (UFSC)
+- Rafael Araujo Lehmkuhl (UFSC)
